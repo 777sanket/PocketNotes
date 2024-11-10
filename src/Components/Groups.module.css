@@ -1,0 +1,128 @@
+.Group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  width: 28%;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.heading {
+  position: sticky;
+  top: 20px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.groupsList {
+  overflow-y: auto;
+  text-wrap: wrap;
+  list-style-type: none;
+  width: 100%;
+
+  ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0; 
+  }
+
+  .listItem {
+    list-style-type: none;
+    width: 100%;
+    border-radius: 16px;
+  } 
+}
+
+
+
+.listItem.active {
+  background: #2F2F2F2B; 
+}
+
+.addGroupBtn {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #16008B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    scale: 0.9;
+  }
+}
+
+
+
+
+
+/* @media only screen and (min-width: 375px ) and (max-width: 935px) {
+  .Groups {
+    z-index: 20;
+    width: 100vh;
+  }
+} */
+
+@media (min-width: 320px) and (max-width: 430px) {
+  .Group {
+    width: 91%;
+    padding-left: 34px;
+  }
+
+  .heading {
+    justify-content: flex-start;
+    /* padding-left: 40px; */
+
+  }
+
+  .listItem.active {
+    background: #2F2F2F2B; 
+    width: 100%;
+  }
+
+  .heading h1 {
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .addGroupBtn {
+    width: 70px;
+    height: 70px;
+
+    button {
+      scale: 0.8;
+    }
+  }
+
+  /* .noteHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .backButton {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #0047FF;
+    cursor: pointer;
+  }
+
+  .noteCardContainer, .bottomContainer {
+    margin-top: 16px;
+  } */
+}

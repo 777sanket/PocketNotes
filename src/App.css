@@ -1,0 +1,43 @@
+.app {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* Global styles for mobile responsiveness */
+@media (min-width: 320px) and (max-width: 430px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Group {
+    width: 100vh;
+    padding: 0 16px;
+  }
+
+  /* .groupItem, .noteContent {
+    width: 100%;
+    padding: 0 16px;
+  } */
+
+  .noteHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* .backButton {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #0047FF;
+    cursor: pointer;
+  } */
+
+  /* .noteCardContainer, .bottomContainer {
+    margin-top: 16px;
+  } */
+}

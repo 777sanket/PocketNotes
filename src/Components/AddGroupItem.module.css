@@ -1,0 +1,57 @@
+.groupItem {
+  display: flex;
+  align-items: center;
+  padding: 15px 0 15px 40px;
+}
+
+.groupLogo {
+  min-width: 4.3rem;
+  min-height: 4.3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.logoText {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #FFFFFF;
+
+}
+
+.groupName {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+
+
+
+
+
+
+/* *************************************************************Media Queries****************************************************************** */
+
+@media (min-width: 320px) and (max-width: 430px) {
+
+  .groupItem {
+    padding: 15px 0 15px 0;
+  }
+
+  .groupLogo {
+    min-width: 3.7rem;
+    min-height: 3.7rem;
+  }
+
+  .logoText {
+    font-size: 1.3rem;
+  }
+
+  .groupName {
+    font-size: 1.2rem;
+  }
+
+}

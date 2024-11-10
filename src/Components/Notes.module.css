@@ -1,0 +1,226 @@
+.Note {
+  position: relative;
+  background: #DAE5F5;
+  width: 72%;
+  height: 100%;
+}
+.noteContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.groupNotes {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.noteHeader {
+  width: 100%;
+  height: 11%;
+  background: #001F8B;
+}
+
+.noteCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+  height: 60%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #FFFFFF #000000A1;
+  scroll-behavior: auto;
+  font-size: 18px;
+}
+
+.noteCard {
+  position: relative;
+  min-height: 35%;
+  width: 95%;
+  background: #FFFFFF;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #0000005c;
+  margin: 10px 0;
+}
+
+
+.noteText {
+  padding: 25px;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.dateTime {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 0 25px 10px 25px;
+  font-weight: 500;
+  color: #000000;
+}
+
+
+.bottomContainer {
+  width: 100%;
+  flex-grow: 1; 
+  background: #001F8B;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textAreaContainer {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 85%;
+  border: 1px solid #CCCCCC;
+  border-radius: 9px;
+  background: #FFFFFF;
+  position: relative;
+}
+
+.inputArea {
+  width: 94%;
+  height: 100%;
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  resize: none;
+
+  textarea {
+    width: 90%;
+    height: 90%;
+    outline: none;
+    resize: none;
+    border: none;
+    color: #9A9A9A;
+    font-size: 18px;
+    font-weight: 400;
+
+    &::placeholder {
+      color: #9A9A9A;
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+}
+
+.enterBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 50px 50px;
+}
+
+.disableBtn{
+  position: absolute;
+}
+
+.enableBtn {
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+/* *************************************************************Media Queries****************************************************************** */
+
+@media (min-width: 320px) and (max-width: 430px) {
+  .Note {
+    width: 100%;
+    height: 100%;
+  }
+
+  .noteHeader {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+  }
+
+  .backButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    button {
+      background: none;
+    }
+    img {
+      scale: 1.2;
+      padding-left: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .noteCardContainer {
+    height: 70%;
+    padding: 5px 0;
+    font-size: 13px;
+  }
+
+  .noteCard {
+    width: 90%;
+    min-height: 50%;
+    margin: 5px 0;
+  }
+
+  .noteText {
+    padding: 15px;
+  }
+
+  .textAreaContainer {
+    width : 92%;
+    height: 80%;
+  }
+
+
+  .inputArea {
+    padding-right: 0;
+    font-size: 12px;
+  }
+
+  .inputArea textarea {
+    font-size: 12px;
+    width: 80%;
+    font-weight: 300;
+
+    &::placeholder {
+      color: #9A9A9A;
+      font-weight: 300;
+      font-size: 12px;
+    }
+  }
+
+  .enterBtn {
+    padding: 50px 50px;
+
+    .disableBtn img {
+      scale: 0.2;
+    }
+
+    .enableBtn img {
+      scale: 0.2;
+    }
+
+  }
+
+ 
+
+}
