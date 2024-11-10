@@ -7,7 +7,7 @@
 }
 
 /* Global styles for mobile responsiveness */
-@media (min-width: 320px) and (max-width: 430px) {
+@media (min-width: 320px) and (max-width: 430px) and (min-height: 660px) and (max-height: 932px){
   .app {
     display: flex;
     flex-direction: column;
@@ -18,26 +18,10 @@
     padding: 0 16px;
   }
 
-  /* .groupItem, .noteContent {
-    width: 100%;
-    padding: 0 16px;
-  } */
 
   .noteHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
-  /* .backButton {
-    background: transparent;
-    border: none;
-    font-size: 16px;
-    color: #0047FF;
-    cursor: pointer;
-  } */
-
-  /* .noteCardContainer, .bottomContainer {
-    margin-top: 16px;
-  } */
 }

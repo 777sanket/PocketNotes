@@ -141,7 +141,7 @@
 
 /* Media Queries here */
 
-@media (min-width: 320px) and (max-width: 430px) {
+@media (min-width: 320px) and (max-width: 430px) and (min-height: 660px) and (max-height: 932px){
   .modalContent {
     width: 75%;
     height: auto;
