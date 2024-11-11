@@ -9,13 +9,6 @@ function Groups({openModal, groups, onSelect, selectedGroup}) {
     openModal();
   }
 
-  // const [activeIndex, setActiveIndex] = useState(null);
-
-  // const handleClick = (group, index) => {
-  //   setActiveIndex(index); 
-  //   onSelect(group); 
-  // };
-
   return (
     <div className={style.Group}>
       <div className={style.heading}>
@@ -25,10 +18,7 @@ function Groups({openModal, groups, onSelect, selectedGroup}) {
        <ul>
         {groups.map((group, index) => (
           <li
-            // className={style.listItem}
             key={index}
-            // className={`${style.listItem} ${activeIndex === index ? style.active : ""}`}
-            // onClick={() => handleClick(group, index)}
             className={`${style.listItem} ${selectedGroup === group ? style.active : ""}`}
             onClick={() => onSelect(group)}
             style={{ cursor: "pointer" }}
@@ -50,6 +40,7 @@ function Groups({openModal, groups, onSelect, selectedGroup}) {
   );
 }
 
+//PropTypes Validation
 Groups.propTypes = {
   selectedGroup: PropTypes.shape({
     name: PropTypes.string.isRequired,

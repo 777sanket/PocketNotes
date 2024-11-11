@@ -3,7 +3,7 @@
   display: flex;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 100dvh;
 }
 
 /* Global styles for mobile responsiveness */
@@ -11,17 +11,6 @@
   .app {
     display: flex;
     flex-direction: column;
-  }
-
-  .Group {
-    width: 100vh;
-    padding: 0 16px;
-  }
-
-
-  .noteHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    min-height: var(--app-height);
   }
 }

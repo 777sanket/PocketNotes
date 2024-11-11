@@ -139,7 +139,7 @@
 
 
 
-/* Media Queries here */
+/* *************************************************************Media Queries****************************************************************** */
 
 @media (min-width: 320px) and (max-width: 430px) and (min-height: 660px) and (max-height: 932px){
   .modalContent {

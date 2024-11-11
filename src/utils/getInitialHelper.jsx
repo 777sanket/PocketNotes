@@ -1,6 +1,5 @@
 function getInitials(name) {
   if (!name) return ""; 
-  // const words = name.split(" ");
   const words = name.split(" ").filter(word => word);
   const initials = words
     .slice(0, 2) 

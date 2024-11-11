@@ -87,6 +87,7 @@ function Notes({ selectedGroup, addNote, groups, goBack }) {
   )
 }
 
+//PropTypes Validation
 Notes.propTypes = {
   selectedGroup: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -113,7 +114,7 @@ Notes.propTypes = {
       ), 
     })
   ).isRequired,
-  goBack: PropTypes.func, // Optional prop for back button
+  goBack: PropTypes.func,
 };
 
 export default Notes;

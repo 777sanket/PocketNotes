@@ -15,21 +15,6 @@ function Modal({ onClose, onSave, checkGroupNameUnique }) {
     }
   };
 
-  // const handleSaveGroup = () => {
-  //   if (groupName && colorPicked) { 
-  //     onSave(groupName, colorPicked);
-  //     onClose();
-  //   } else {
-  //     if (!groupName && !colorPicked) {
-  //       alert("Please enter a group name and select a color.");
-  //     } else if (!groupName) {
-  //       alert("Please enter a group name.");
-  //     } else if (!colorPicked) {
-  //       alert("Please select a color.");
-  //     }
-  //   }
-  // }
-
   const handleSaveGroup = () => {
     if (!groupName) {
       setError("Please enter a group name.");
@@ -87,6 +72,7 @@ function Modal({ onClose, onSave, checkGroupNameUnique }) {
   )
 }
 
+//PropTypes Validation
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
   onSave: PropTypes.func.isRequired,
