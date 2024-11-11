@@ -12,8 +12,7 @@ import style from "./Notes.module.css";
 
 function Notes({ selectedGroup, addNote, groups, goBack }) {
 
-  const [text, setText] = useState(''); 
-
+  const [text, setText] = useState('');
   const handleAddNote = () => {
     const date = new Date();
     const note = {
@@ -22,7 +21,7 @@ function Notes({ selectedGroup, addNote, groups, goBack }) {
       date: date.toLocaleDateString(),
     };
     addNote(groupIndex, note);
-    setText(''); 
+    setText('');
   };
 
   const handleTextChange = (e) => {
@@ -48,19 +47,19 @@ function Notes({ selectedGroup, addNote, groups, goBack }) {
             </div>
 
             <div className={style.noteCardContainer}>
-              {groups[groupIndex] && 
+              {groups[groupIndex] &&
                 groups[groupIndex].notes.map((note, noteIndex) => (
-                <div className={style.noteCard} key={noteIndex}>
-                  <div className={style.noteText}>
-                    {note.text}
+                  <div className={style.noteCard} key={noteIndex}>
+                    <div className={style.noteText}>
+                      {note.text}
+                    </div>
+                    <div className={style.dateTime}>
+                      <div className={style.date}>{formatDate(note.date)}</div>
+                      <div className={style.dot}><img src={dotImg} alt="" /></div>
+                      <div className={style.time}>{formatTime(note.time)}</div>
+                    </div>
                   </div>
-                  <div className={style.dateTime}>
-                    <div className={style.date}>{formatDate(note.date)}</div>
-                    <div className={style.dot}><img src={dotImg} alt="" /></div>
-                    <div className={style.time}>{formatTime(note.time)}</div>
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
 
             <div className={style.bottomContainer}>
@@ -72,7 +71,7 @@ function Notes({ selectedGroup, addNote, groups, goBack }) {
                   {text.trim() === '' ? (
                     <img className={style.disableBtn} src={enterImg} alt="Disabled Enter Button" />
                   ) : (
-                    <img className={style.enableBtn} src={activeBtn} alt="Enabled Enter Button"  onClick={handleAddNote} />
+                    <img className={style.enableBtn} src={activeBtn} alt="Enabled Enter Button" onClick={handleAddNote} />
                   )}
                 </div>
               </div>
@@ -111,7 +110,7 @@ Notes.propTypes = {
           date: PropTypes.string.isRequired,
           time: PropTypes.string.isRequired,
         })
-      ), 
+      ),
     })
   ).isRequired,
   goBack: PropTypes.func,
